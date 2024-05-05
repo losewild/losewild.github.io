@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html translate="no">
+    <head>
+        <title>Home-SHIYE Game</title>
+        <link rel="stylesheet" type="css" href="./css/style.css">
+        <style>
+            /* 初始化整个界面 */
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            
+            /*中心*/
+            .text {
+                background-image: linear-gradient(10deg,pink 0,white 50%,green 105%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 4rem;
+                
+            }
+            .sky-image {
+                background: linear-gradient(125deg,#28A295,skyblue,#28A230, #28A27D,grey,yellow);
+                background-size: 600%;
+                animation: sky-image 15s linear infinite;
+                height: 60rem;
+            }
+            @keyframes sky-image{
+                0%{
+                    background-position: 0% 50%;
+                }
+                50%{
+                    background-position: 100% 50%;
+                }
+                100%{
+                    background-position: 0% 50%;
+                }
+            }
+            .imags {
+                width: 20%;
+            }
+            .mymodal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: #fff;
+            }
+            .modal-content {
+                background-color: aliceblue;
+                margin: 15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+            }
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+        <style>
+        .model {
+            display:none;
+            position:fixed;
+            z-index:1;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            overflow:auto;
+            background-color:rgb(0,0,0);
+            background-color:rgba(0,0,0,0.4);
+        }
+        .model-con {
+            background-color:#fefefe;
+            margin:0.9375rem auto;
+            padding:1.25rem;
+            border:1px solid #888;
+            width:80%;
+            margin-top:25rem;
+        }
+        .close {
+            margin: 0;
+            background-color:#fefefe;
+            color:grey;
+            float:right;
+            font-size:1.75rem;
+            font-weight:bold;
+            border:none;
+        }
+        .close:hover,.close:focus {
+            color:black;
+            text-decoration:none;
+            cursor:pointer;
+        }
+        </style>
+        <script src="./css/main.js"></script>
+    </head>
+    <body style="background-color: skyblue;">
+        <div style="margin: 1rem;">
+            <div class="logo" style="display: inline-block;">
+                <h1 style="color: aquamarine;font-size: 2rem;">Lose Wild</h1>
+            </div>
+            <a onclick="login(this)" id="login" style="padding-left: 0.5rem; color: black; text-decoration: underline;text-decoration-color: gray;">log(web)</a>
+            <a href="#btm" style="padding-left: 0.5rem; color: black; text-decoration: underline;text-decoration-color: gray;">programmers&sponsor</a>
+            <a href="./Gride.html" style="padding-left: 0.5rem; color: black; text-decoration: underline;text-decoration-color: gray;">Guide</a>
+            <button id="dow" style="border: none;border-radius: 30%; background-image: linear-gradient(rgb(77, 164, 199) 0%,lightblue 50%,pink 100%); float: right;width: 4rem;height:2rem ;" onclick="strt(this)">Download now</button>
+            <div id="mymodel" class="model">
+                <div class="model-con">
+                    <button class="close" onclick="clos(this)">&times;</button>
+                    <p style="text-align: center;font-size: xx-large;">Term of service</p>
+                    <p>.It is strictly prohibited to resell or modify without authorization, otherwise we will take corresponding measures</p>
+                    <p>.严禁倒卖和私自修改行为，否则我们将给予相应措施</p>
+                    <button style="background-color: red;border: none;">(I agree)<a href="./shiye.zip" download="shiye.zip">我同意以上条款</a></button>
+                </div>
+            </div>
+            <script>
+                var btn = document.getElementById('dow');
+                var span = document.getElementById('close');
+                var model = document.getElementById('mymodel');
+                function strt(btn){
+                    model.style.display = 'block';
+                }
+                function clos(){
+                    model.style.display = 'none';
+                }
+                window.onclick = function(event){
+                    if (event.target == model){
+                        model.style.display = 'none'
+                    }
+                }
+            </script>
+        </div>
+        <hr style="margin: 0rem;padding: 0rem;background-color: aqua;">
+        <div class="sky-image" style="line-height: 0rem;">
+            <h1 class="text" style="text-align: center;vertical-align: center;padding: 20%;opacity: 0.2;">Download</h1>
+            <br>
+            <span style="width: 20px;height: 20px;border-radius: 50%;border: none;display: inline-block;background-color: pink;margin-left: 50%;"></span>
+            <br>
+            <P style="margin-top:1rem ;text-align: center;color: greenyellow;">||bulid:(windows x64) Beta</p>
+        </div>
+        <hr>
+        <div style="background-color: #28A230;">
+            <ul>
+                <h1 class="text" style="text-align: center;">Moives&Photos</h1>
+                <ol><img class="imags" src="./images/hill.PNG"></ol>
+                <ol><img class="imags" src="./images/sunshine.PNG"></ol>
+                <ol><img class="imags" src="./images/6.PNG"></ol>
+                <ol><img class="imags" src="./images/grass.PNG"></ol>
+                <h1 class="text">Those images is bulid in Beta 0.1.0 (bulid224)</h1>
+            </ul>
+            <br>
+            <br>
+        </div>
+        <hr>
+        <div id="comment">
+            <h1 class="text" style="text-align: center;">comment</h1>
+            <p style="color: rgb(190, 20, 20);">Official:请文明评论</p>
+            <p style="color: rgb(190, 20, 20);">Official:Please comment with civility</p>
+            <button id="commk" onclick="gettext(this)" style="height: 52rem;margin-left: 35%;border: none;background-color: rgba(1,1,1,0.5);padding-right: 0;"><h1 class="text">I want to comment🧡(onclick me)</h1></button>
+            <table id="comtext" style="border: grey solid 0.1rem;">
+                <h1 class="text" style="font-size: large;text-align: center;">comments</h1>
+                <tr><td></td></tr>
+            </table>
+        </div>
+        <hr>
+        <div style="background-color: palevioletred">
+            <h1 class="text" style="text-align: center;">Thanks (contain MUG)</h1>
+            <ul style="color: #28A27D;text-align: center;">
+                    <li>FYS</li>
+                    <li>ZZQ</li>
+                    <li>WSD</li>
+                    <li>unknown001</li>
+                    <li>unknown002</li>
+                    <li>unknown003</li>
+                    <li>unknown004</li>
+                    <li>unknown006</li>
+            </ul>
+            <p>QQ:3359836972</p>
+            <p>This game is a personal game,<a href="#">MUG</a> is only my team</p>
+            <p id="btm">Copyringt © 2024 LIUFEI Some rights Reserved.</p>
+        </div>
+
+
+    </body>
+</html>
