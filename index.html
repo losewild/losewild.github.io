@@ -1,9 +1,206 @@
 <html>
-    <title>shiye2</title>
     <meta charset="UTF-8">
+    <title>shiye2 : 逃离</title>
+    <link rel="icon" href="image/1.PNG">
 </html>
 
-<body style="background-image: url('image/1.PNG');background-attachment: fixed;background-position: center;background-color: black;">
-    <h1 style="color: aliceblue;text-align: center;margin-top: 20%;">shiye2 开始公测</h1>
-    <a href="https://www.123912.com/s/ZRhcVv-9se4" style="text-align: center; color: aqua;text-decoration-color: green;text-decoration-style: double;"><h2>点击这里公测</h2></a>
+<body class="MainTheme">
+    <div class="reconmend">
+        <h1 class="gridete">《shiye2 : 逃离》 is coming!</h1>
+        <a href="https://www.123912.com/s/ZRhcVv-ONe4"><h2>现在就下载</h2></a>
+    </div>
+
+    <hr>
+
+    <div class="senceshow">
+        <div>
+        <ul>
+            <p>更新内容</p>
+            <li>1.画质更新</li>
+            <li>2.开启ssr和sdfgi支持</li>
+        </ul>
+        </div>
+
+        <img id="img1" src="image/1.PNG">
+        <button onclick="flash()"><p id="textflash">切换效果</p></button>
+
+        <h1>Thanks for Godot Engine</h1>
+    </div>
+
+    <hr>
+
+    <div class="othergames">
+        <a class="shiye1buttom" href="https://www.123912.com/s/ZRhcVv-r374"><h3>shiye1</h3></a>
+        <a class="shiye2buttom" href="https://www.123912.com/s/ZRhcVv-ONe4"><h3>shiye2 : 逃离</h3></a>
+
+        <div class="gridete2"></div>
+        <h1>更多内容等您的到来</h1>
+        <div class="checkbuttom">
+            <a href="https://qm.qq.com/q/dCeb5jQqVq"><h4>投稿/举报</h4></a>
+        </div>
+        <p class="copyright">Web by Alsy XianFly</p>
+    </div>
+    
+    <hr>
+
+    <div class="thanksfor">
+
+    </div>
 </body>
+
+<style>
+    /*main css*/
+    body {
+        background-color: black;
+        filter: blur(0.5px);
+    }
+    
+    div {
+        display: inline;
+        text-align: center;
+    }
+
+    h1 {
+        color: red;
+        text-align: center;
+        z-index: 1;
+    }
+    
+    h2 {
+        color: greenyellow;
+        text-decoration-line: inherit;
+    }
+
+    h3{
+        display: block;
+        color: white;
+    }
+    
+    h4{
+        color: white;
+    }
+    
+    a {
+        color: white;
+        text-align: center;
+    }
+    
+    ul {
+        display: block;
+        list-style: none;
+    }
+    
+    li {
+        color: white;
+    }
+    
+    p {
+        display: inline-block;
+        color: white;
+    }
+    
+    img {
+        display: block;
+        margin: 0 auto;
+        height: 300px;
+    }
+    
+    button {
+        display: block;
+        margin: 0 auto;
+        border-radius: 100%;
+        border-color: white;
+        border-style: none;
+        background-color: rgba(25, 108, 177, 0.863);
+    }
+    
+    /*cus css*/
+
+    .reconmend {
+        display: block;
+        height: 50vw;
+        background-image: url("image/1.PNG"),url("image/2.PNG");
+        background-position: center;
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+        animation: cua 2s;
+    }
+
+    @keyframes cua {
+        0%{filter: blur(0px);}
+        50%{filter: blur(100px);}
+        0%{filter: blur(0px);}
+    }
+
+    .senceshow {
+        display: block;
+        height: 50vw;
+        animation: backgdc 10s infinite;
+    }
+
+    @keyframes backgdc {
+        0%{background-color:rgba(0, 0, 0, 0.959) ;}
+        50%{background-color: rgba(127, 255, 212,0.1);}
+        75%{background-color: rgba(135, 235, 188,0.1);}
+        100%{background-color:rgba(0, 0, 0, 0.925) ;}
+    }
+
+    .othergames {
+        display: block;
+        height: 50vw;
+    }
+
+    .gridete {
+        display: block;
+        padding-top: 20vw;
+    }
+    
+    .gridete2 {
+        display: block;
+        padding-top: 15vw;
+    }
+    
+    .shiye1buttom {
+        margin-top: 2vw;
+        background-color: rgba(0, 255, 255, 0.438);
+        display: inline-block;
+        border-radius: 100%;
+    }
+
+    .shiye2buttom {
+        background-color: rgba(0, 255, 255, 0.445);
+        display: inline-block;
+        text-align: left;
+        border-radius: 100%;
+    }
+
+    .checkbuttom {
+        text-align: center;
+        display: inline;
+    }
+
+    .copyright {
+        color: rgba(224, 21, 21, 0.733);
+    }
+</style>
+
+<script>
+    const images = ["image/1.PNG","image/2.PNG"]
+    var cuindex = 0
+    function flash(){
+        cuindex += 1
+        if(cuindex > 1){
+            cuindex = 0
+        }
+        document.getElementById("img1").src = images[cuindex]
+
+        if(cuindex == 1){
+            document.getElementById("textflash").textContent = "Now SDFGI enabled"
+        }
+        else{
+            document.getElementById("textflash").textContent = "Now SDFGI disabled"
+        }
+    }
+
+    //
+</script>
